@@ -116,12 +116,12 @@ public class ProductMgr {
 	public void showCost() {
 		int sum=0;
 		for(Product p : list) {
-			sum+=p.getPrice();
+			sum+=p.getPrice()*p.getStock();
 		}
 		if(list.isEmpty()) {
 			System.out.println("리스트가 비어있습니다.");
 		}else {
-			System.out.println("리스트 내 상품의 가격의 총합은 "+sum+"원 입니다.");
+			System.out.println("리스트 내 재고의  총 가격은 "+sum+"원 입니다.");
 		}
 	}
 	
