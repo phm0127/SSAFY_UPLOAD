@@ -58,7 +58,7 @@ public class ProductMgr {
 	public void showName(String name) {
 		boolean flag=true;
 		for(Product p : list) {
-			if(p.getName().equals(name)) {
+			if(p.getName().contains(name)) {
 				System.out.println(p);
 				flag=false;
 			}
