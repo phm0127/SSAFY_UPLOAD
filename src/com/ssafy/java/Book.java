@@ -1,12 +1,12 @@
 package com.ssafy.java;
 
 public class Book {
-	private String isbn;
-	private String title;
-	private String author;
-	private String publisher;
-	private int price;
-	private String desc;
+	protected String isbn;
+	protected String title;
+	protected String author;
+	protected String publisher;
+	protected int price;
+	protected String desc;
 	
 	public void setIsbn(String isbn) {
 		this.isbn=isbn;
@@ -26,6 +26,26 @@ public class Book {
 	public void setDesc(String desc) {
 		this.desc=desc;
 	}
+	
+	public String getIsbn() {
+		return this.isbn;
+	}
+	public String getTitle() {
+		return this.title;
+	}
+	public String getAuthor() {
+		return this.author;
+	}
+	public String getPublisher() {
+		return this.publisher;
+	}
+	public int getPrice() {
+		return this.price;
+	}
+	public String getDesc() {
+		return this.desc;
+	}
+	
 	public String toString() {
 		String str = isbn+"	|"+title+"	|"+author+"	|"+publisher+"	|"+price+"	|"+ desc;
 		return str;
