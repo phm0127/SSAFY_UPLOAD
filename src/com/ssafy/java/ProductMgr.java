@@ -11,24 +11,14 @@ public class ProductMgr {
 	}
 	
 	public void addTV(String serial,String name,int price,int stock,int size,String typeOfDisplay) {
-		TV tv = new TV();
-		tv.setSerial(serial);
-		tv.setName(name);
-		tv.setPrice(price);
-		tv.setStock(stock);
-		tv.setSize(size);
-		tv.setTypeOfDisplay(typeOfDisplay);
+		TV tv = new TV(serial,name,price,stock,size,typeOfDisplay);
+		
 		
 		list.add(tv);
 	}
 	
 	public void addRefrigerator(String serial,String name,int price,int stock,int size) {
-		Refrigerator refrigerator = new Refrigerator();
-		refrigerator.setSerial(serial);
-		refrigerator.setName(name);
-		refrigerator.setPrice(price);
-		refrigerator.setStock(stock);
-		refrigerator.setSize(size);
+		Refrigerator refrigerator = new Refrigerator(serial,name,price,stock,size);
 		
 		list.add(refrigerator);
 	}

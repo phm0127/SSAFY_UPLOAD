@@ -12,8 +12,6 @@ public class Main {
 	static char[][] map;
 	static boolean flag;
 	static int answer;
-	static Queue<Integer> qr;
-	static Queue<Integer> qc;
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		R=sc.nextInt();
@@ -26,17 +24,9 @@ public class Main {
 			}
 		}
 		for(int i=0;i<R;i++) {
-			qr = new LinkedList<Integer>();
-			qc = new LinkedList<Integer>();
 			flag=false;
 			go(i,0);
-			if(!flag) {
-				while(!qr.isEmpty()) {
-					int a= qr.poll();
-					int b = qc.poll();
-					map[a][b]='.';
-				}
-			}
+			
 		}
 		System.out.println(answer);
 	}
@@ -51,11 +41,9 @@ public class Main {
 			for(int i=0;i<3&&!flag;i++) {
 				nr=r+dR[i];
 				nc=c+dC[i];
-				if(nr>=0&&nc>=0&&nc<C&&nr<R&&map[nr][nc]=='.') {
+				if(nr>=0&&nc>=0&&nc<C&&nr<R&&map[nr][nc]=='.'&&!flag) {
 					map[nr][nc]='1';
 					go(nr,nc);
-					qr.add(nr);
-					qc.add(nc);
 				}
 			}
 		}
