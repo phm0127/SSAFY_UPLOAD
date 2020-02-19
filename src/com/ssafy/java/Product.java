@@ -1,6 +1,8 @@
 package com.ssafy.java;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable{
 	protected String serial;
 	protected String name;
 	protected int price;

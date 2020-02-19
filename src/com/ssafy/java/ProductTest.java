@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ProductTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Scanner scan = new Scanner(System.in);
 		Scanner sc = new Scanner(System.in);
 		int menu=1;
@@ -128,6 +128,7 @@ public class ProductTest {
 				System.out.println(pm.totalPrice());
 			}
 			else {
+				pm.save();
 				break;
 			}
 

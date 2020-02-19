@@ -6,7 +6,6 @@ public class Main {
 	static int R,C,M;
 	static int[][] map;
 	static Shark[] list;
-	static boolean[] b;
 	static int answer;
 	static int[] dR = {-1,1,0,0};
 	static int[] dC = {0,0,1,-1};
@@ -17,7 +16,6 @@ public class Main {
 		map=new int[R][C];
 		M = sc.nextInt();
 		list = new Shark[M];
-		b = new boolean[M];
 		answer=0;
 		for(int i=0;i<M;i++) {
 			int r = sc.nextInt()-1;
@@ -72,6 +70,8 @@ public class Main {
 						list[j].d=4;
 					}
 				}
+				list[j].r=nr;
+				list[j].c=nc;
 				if(map[nr][nc]>0) {
 					if(list[j].z>list[map[nr][nc]-1].z) {
 						list[map[nr][nc]-1].dead=true;
@@ -86,6 +86,7 @@ public class Main {
 				}
 
 			}
+			
 		}
 		turn(turn+1);
 
