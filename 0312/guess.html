@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Guess What?</title>
+</head>
+<body>
+	<button id = "start">게임 시작</button>
+	<button id = "rand">난수 발생</button>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+  	var num=0;
+	$("#rand").on('click',a);
+	$("#start").on('click',b);
+	function a(){
+		num=Math.floor(Math.random()*10);
+	}
+	function b(){
+		var inputNum = Number(prompt("숫자를 입력하세요.","0~9"));
+		if(inputNum==num){
+			alert("정답입니다.");
+		}
+		else{
+			alert("틀렸습니다.");
+		}
+	}
+	
+ 	
+ </script>
+</html>
