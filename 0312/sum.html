@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sum</title>
+</head>
+<body>
+	<div><textarea placeholder="더 할 숫자를 입력해주세요" id = 'a'></textarea></div>
+	<div><textarea placeholder="더 할 숫자를 입력해주세요" id = 'b'></textarea></div>
+	<button id="btn">더하기</button>
+	<div></div>	
+</body>
+ <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+ <script>
+	$('#btn').on('click',sum);
+	
+	function sum(){
+		var a = Number($('#a').val());
+		var b = Number($('#b').val());
+		alert(a+b);
+	}
+ </script>
+</html>
