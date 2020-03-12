@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>multiple</title>
+</head>
+<body>
+	
+	
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+	var gugudan="";
+	gugudan+="<table>"
+ 	for(var i=1; i<10;i++){
+ 		gugudan += "<tr>" 
+		for(var j = 1; j<10;j++){
+			gugudan+= "<td>"+i+"x"+j+"="+i*j+"</td>";
+		}
+		gugudan+="</tr>";
+	}
+	gugudan+="</table>"
+ 	document.write(gugudan);
+ 	
+ </script>
+ 
+</html>
